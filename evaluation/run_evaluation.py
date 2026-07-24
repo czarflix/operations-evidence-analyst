@@ -17,8 +17,19 @@ def main() -> None:
         passed += int(ok)
         if not ok:
             print(json.dumps({"question": case["question"], "expected": case, "actual": result}, sort_keys=True))
-    print(json.dumps({"cases": len(cases), "passed": passed, "accuracy": round(passed / len(cases), 4)}, sort_keys=True))
-    raise SystemExit(0 if passed == len(cases) else 1)
+    all_passed = passed == len(cases)
+    print(
+        json.dumps(
+            {
+                "cases": len(cases),
+                "passed": passed,
+                "fixture_pass_rate": round(passed / len(cases), 4),
+                "result": "fixture_regression_pass" if all_passed else "fixture_regression_fail",
+            },
+            sort_keys=True,
+        )
+    )
+    raise SystemExit(0 if all_passed else 1)
 
 
 if __name__ == "__main__":
