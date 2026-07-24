@@ -1,6 +1,6 @@
-# AirOps Evidence Analyst
+# Operations Evidence Analyst
 
-A deterministic safety/reference slice extracted from the earlier FinSync prototype. It demonstrates bounded read-only SQL, rule-based routing, deterministic retrieval, citations, and an inspectable tool trace over a small synthetic operations fixture.
+This project is a small deterministic operations-analysis path extracted from an earlier research prototype. It demonstrates bounded read-only SQL, rule-based routing, deterministic retrieval, citations, and an inspectable tool trace over synthetic operations data.
 
 ```mermaid
 flowchart LR
@@ -21,6 +21,10 @@ PYTHONPATH=. python3 evaluation/run_evaluation.py
 
 The evaluation is offline and reproducible. It currently contains 21 fixture-regression cases over a 20-row CSV in `air_ops/data/operations.csv`. The data is not an airline feed, and a full pass means only that the checked-in deterministic rules still satisfy these checked-in cases.
 
+## Execution scope
+
+The project runs locally and offline only; it has no public deployment. A full local run is a 21/21 deterministic fixture-regression pass, not an accuracy result or a live-service result.
+
 ## What is demonstrated
 
 - SQL is restricted to one bounded `SELECT`, `WITH`, or `EXPLAIN` statement against an in-memory copy of the fixture.
@@ -28,7 +32,7 @@ The evaluation is offline and reproducible. It currently contains 21 fixture-reg
 - The route and each tool call are returned in a JSON trace.
 - Unsupported, live, or instruction-bypassing requests abstain.
 
-## Proof boundary
+## System scope
 
 - Routing is a regex/keyword policy, not a learned classifier or LLM router.
 - Query selection chooses among three hard-coded SQL templates; it is not general text-to-SQL.
@@ -40,4 +44,4 @@ The original FastAPI/React application remains in `backend/` and `frontend/` as 
 
 ## Limitations
 
-This is a small portfolio reference fixture, not a benchmark, flagship analytics system, financial adviser, airline operations system, or hosted production service. It does not establish SQL-generation quality, retrieval quality, citation entailment, model accuracy, operational readiness, or performance on live data. No current-data, privacy, latency, or provider-isolation guarantee is implied.
+This is a small local engineering example, not a benchmark, full analytics system, financial adviser, airline operations system, or hosted production service. It does not establish SQL-generation quality, retrieval quality, citation entailment, model accuracy, operational readiness, or performance on live data. No current-data, privacy, latency, or provider-isolation guarantee is implied.

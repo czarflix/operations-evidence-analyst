@@ -1,6 +1,6 @@
 /**
  * FinSync Pro - Main Application
- * Agentic RAG Platform with Industrial Noir & Milk Design
+ * Document and web research workspace with Industrial Noir & Milk Design
  */
 
 import { useState, useRef, useEffect } from 'react';

@@ -1,6 +1,6 @@
-# Architecture and evidence contract
+# Architecture and data flow
 
-The public reference path is intentionally smaller than the original provider-backed prototype:
+The local deterministic path is intentionally smaller than the original provider-backed prototype:
 
 1. `air_ops.router` selects SQL, retrieval, both, or abstain using an explicit policy.
 2. `air_ops.dataset` loads a bundled synthetic CSV into an in-memory SQLite database and permits one read-only statement.
