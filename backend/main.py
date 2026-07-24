@@ -1,6 +1,6 @@
 """
 FinSync Pro - FastAPI Backend
-Agentic RAG Platform with Hybrid Search
+Document and web research service with hybrid search
 """
 
 import os
@@ -35,7 +35,7 @@ from retrievers.hybrid_retriever import update_bm25_corpus
 # Initialize FastAPI app
 app = FastAPI(
     title="FinSync Pro API",
-    description="Agentic RAG Platform with Hybrid Search",
+    description="Document and web research service with hybrid search",
     version="1.0.0"
 )
 

@@ -1,4 +1,4 @@
-"""Answerable, traceable offline question path for the portfolio demo."""
+"""Answerable, traceable offline question path for local evaluation."""
 
 from __future__ import annotations
 

@@ -28,7 +28,7 @@ class Citation(BaseModel):
 
 class ChatResponse(BaseModel):
     """Response model for chat endpoint."""
-    answer: str = Field(..., description="AI-generated answer")
+    answer: str = Field(..., description="Generated answer")
     trace: List[str] = Field(
         default_factory=list,
         description="Sources used: 'Web Search', 'Vector Store'"

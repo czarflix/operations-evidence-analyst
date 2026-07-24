@@ -52,4 +52,4 @@ export const SPRING_BOUNCY = {
 // APP INFO
 // ═══════════════════════════════════════════════════════════════════════════════
 export const APP_NAME = 'FinSync Pro';
-export const APP_TAGLINE = 'Agentic RAG Platform';
+export const APP_TAGLINE = 'Document & Web Research';

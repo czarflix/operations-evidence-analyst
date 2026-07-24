@@ -1,4 +1,4 @@
-"""Offline, deterministic AirOps Evidence Analyst reference vertical slice."""
+"""Offline, deterministic operations-analysis module."""
 
 from .service import answer_question
 

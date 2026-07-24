@@ -57,3 +57,11 @@ def test_evaluation_is_labeled_as_fixture_regression_not_accuracy():
         "result": "fixture_regression_pass",
     }
     assert "accuracy" not in summary
+
+
+def test_readme_locks_local_offline_scope():
+    readme = (Path(__file__).resolve().parents[1] / "README.md").read_text()
+
+    assert "The project runs locally and offline only; it has no public deployment." in readme
+    assert "21/21 deterministic fixture-regression pass, not an accuracy result" in readme
+    assert "https://finsync-two.vercel.app" not in readme

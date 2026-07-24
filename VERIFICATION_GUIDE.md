@@ -99,7 +99,7 @@ Test that context is maintained:
 
 | Feature | How to Verify |
 |---------|---------------|
-| **Typewriter effect** | Watch AI response stream character by character |
+| **Typewriter effect** | Watch the response stream character by character |
 | **Trace bar** | Check "Sources:" shows 🌐 Web or 📄 Docs badges |
 | **Citation chips** | See numbered chips [1], [2] after response |
 | **Citation drawer** | Click a chip → slide-out panel with source text |
